@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERS/EULAR CTD-ILD Guidelines 2026 | Vamsipedia</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0efea;color:#1a1a18;font-size:15px;line-height:1.6}
+.topbar{background:#fff;border-bottom:0.5px solid rgba(0,0,0,0.1);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.brand{font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
+.brand-dot{width:8px;height:8px;border-radius:50%;background:#1d9e75}
+.topbar-right{font-size:11px;color:#9a9a94}
+.container{max-width:860px;margin:0 auto;padding:24px 16px 48px}
+.hero{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:16px;padding:24px 28px;margin-bottom:20px}
+.hero-eyebrow{font-size:11px;font-weight:500;color:#0f6e56;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+.hero-title{font-size:22px;font-weight:500;margin-bottom:6px}
+.hero-sub{font-size:13px;color:#5a5a56;line-height:1.6;max-width:640px}
+.hero-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500}
+.t-pft{background:#e6f1fb;color:#185fa5}
+.t-hrct{background:#e1f5ee;color:#0f6e56}
+.t-6mwt{background:#faeeda;color:#854f0b}
+.t-prom{background:#fbeaf0;color:#993556}
+.hero-meta{font-size:11px;color:#9a9a94}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.nav-btn{padding:8px 16px;border:0.5px solid rgba(0,0,0,0.18);border-radius:8px;background:#fff;color:#5a5a56;font-size:13px;cursor:pointer;font-family:inherit;transition:all .15s}
+.nav-btn:hover{background:#f0efea;color:#1a1a18}
+.nav-btn.active{background:#e6f1fb;color:#185fa5;border-color:#378add;font-weight:500}
+.section{display:none}.section.active{display:block}
+.card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.card-title{font-size:14px;font-weight:500;margin-bottom:12px;color:#1a1a18}
+.ctd-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:14px}
+.ctd-tab{padding:5px 13px;border:0.5px solid rgba(0,0,0,0.1);border-radius:20px;font-size:12px;cursor:pointer;background:#f0efea;color:#5a5a56;font-family:inherit;transition:all .12s}
+.ctd-tab.on{background:#eeedfe;color:#3c3489;border-color:#afa9ec;font-weight:500}
+.ctd-panel{display:none}.ctd-panel.on{display:block}
+.rec{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.rec:first-of-type{padding-top:0}
+.rec:last-child{border-bottom:none;padding-bottom:0}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500;white-space:nowrap;flex-shrink:0;margin-top:1px}
+.b-strong{background:#e6f1fb;color:#185fa5}
+.b-cond{background:#e1f5ee;color:#0f6e56}
+.b-against{background:#fcebeb;color:#791f1f}
+.b-none{background:#f0efea;color:#5a5a56}
+.rec-text{font-size:13px;color:#5a5a56;line-height:1.6}
+.rec-text b{font-weight:500;color:#1a1a18}
+.evidence{font-size:11px;color:#9a9a94;margin-top:4px}
+.tip{background:#faeeda;border-radius:8px;padding:10px 14px;font-size:12px;color:#633806;margin-top:12px;line-height:1.55;border-left:3px solid #ef9f27}
+.drug-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px;margin:10px 0}
+.drug{background:#f0efea;border-radius:8px;padding:11px 13px}
+.drug-name{font-weight:500;font-size:13px;margin-bottom:3px;color:#1a1a18}
+.drug-sub{color:#5a5a56;font-size:11px;line-height:1.4}
+.drug-str{margin-top:6px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.metric{background:#f0efea;border-radius:8px;padding:14px;text-align:center}
+.metric-val{font-size:22px;font-weight:500;color:#1a1a18}
+.metric-lbl{font-size:11px;color:#5a5a56;margin-top:3px}
+.algo-step{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.algo-step:last-child{border-bottom:none}
+.step-num{min-width:24px;height:24px;border-radius:50%;background:#e6f1fb;color:#185fa5;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;margin-top:1px}
+.step-num.purple{background:#eeedfe;color:#3c3489}
+.disc{border-top:0.5px solid rgba(0,0,0,0.1);margin-top:24px;padding-top:14px;font-size:11px;color:#9a9a94;line-height:1.65}
+.disc b{color:#5a5a56;font-weight:500}
+.footer{text-align:center;font-size:11px;color:#9a9a94;padding:24px 16px;border-top:0.5px solid rgba(0,0,0,0.08);margin-top:8px}
+@media(max-width:520px){
+  .hero{padding:18px 16px}.hero-title{font-size:18px}
+  .container{padding:16px 12px 40px}.topbar{padding:10px 16px}
+  .drug-grid{grid-template-columns:1fr 1fr}.row2{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><div class="brand-dot"></div>Vamsipedia® · Precision Pulmonary Diagnostics</div>
+  <div class="topbar-right">ERS/EULAR 2026 · CTD-ILD Guidelines</div>
+</div>
+
+<div class="container">
+
+<div class="hero">
+  <div class="hero-eyebrow">Clinical practice guidelines · Interactive education module</div>
+  <div class="hero-title">ERS/EULAR CTD-ILD Guidelines 2026</div>
+  <div class="hero-sub">Evidence-based recommendations on screening, diagnosis, monitoring and treatment of interstitial lung disease in connective tissue diseases — developed by a joint ERS/EULAR task force using GRADE methodology.</div>
+  <div class="hero-tags">
+    <span class="tag t-pft">PFT</span>
+    <span class="tag t-hrct">HRCT</span>
+    <span class="tag t-6mwt">6MWT</span>
+    <span class="tag t-prom">PROMs</span>
+    <span class="hero-meta">25 PICO questions · 28 narrative questions · GRADE methodology · Eur Respir J 2026</span>
+  </div>
+</div>
+
+<div class="nav">
+  <button class="nav-btn active" onclick="showSection('screening',this)">Screening</button>
+  <button class="nav-btn" onclick="showSection('diagnosis',this)">Diagnosis</button>
+  <button class="nav-btn" onclick="showSection('monitoring',this)">Monitoring</button>
+  <button class="nav-btn" onclick="showSection('treatment',this)">Treatment</button>
+  <button class="nav-btn" onclick="showSection('research',this)">Research gaps</button>
+</div>
+
+<!-- SCREENING -->
+<div id="screening" class="section active">
+
+  <div class="card">
+    <div class="card-title">Which patients should be screened for ILD? (Narrative questions 1–6)</div>
+    <div class="ctd-tabs">
+      <div class="ctd-tab on" onclick="showCtd('scr','ssc',this)">SSc</div>
+      <div class="ctd-tab" onclick="showCtd('scr','ra',this)">RA</div>
+      <div class="ctd-tab" onclick="showCtd('scr','iim',this)">IIM</div>
+      <div class="ctd-tab" onclick="showCtd('scr','mctd',this)">MCTD</div>
+      <div class="ctd-tab" onclick="showCtd('scr','sjd',this)">SjD</div>
+      <div class="ctd-tab" onclick="showCtd('scr','sle',this)">SLE</div>
+    </div>
+    <div id="scr-ssc" class="ctd-panel on">
+      <div class="rec"><span class="badge b-strong">Strong</span><div><div class="rec-text"><b>Screen all SSc patients</b> using HRCT regardless of symptoms or risk factors. High ILD prevalence makes risk-factor-based gating unsafe.</div><div class="evidence">Low certainty · 26 observational studies, n=8898 · ATA-I, diffuse cutaneous SSc, higher mRSS are key risk factors</div></div></div>
+    </div>
+    <div id="scr-ra" class="ctd-panel">
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>Screen RA patients with risk factors</b> — older age, smoking history, elevated RF/anti-CCP, increased inflammatory markers, male sex, high articular disease activity.</div><div class="evidence">Low certainty · 15 observational studies, n=4012</div></div></div>
+    </div>
+    <div id="scr-iim" class="ctd-panel">
+      <div class="rec"><span class="badge b-strong">Strong</span><div><div class="rec-text"><b>Screen IIM patients with risk factors</b> — anti-synthetase syndrome, CADM, mechanic's hands, arthritis, anti-synthetase, anti-MDA-5 or anti-Ro52 antibodies.</div><div class="evidence">Low certainty · 20 observational studies + 1 meta-analysis</div></div></div>
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>Consider screening most IIM patients</b> even without risk factors, <b>except inclusion body myositis</b>.</div><div class="evidence">Low certainty</div></div></div>
+    </div>
+    <div id="scr-mctd" class="ctd-panel">
+      <div class="rec"><span class="badge b-strong">Strong</span><div><div class="rec-text"><b>Screen all MCTD patients</b> using HRCT — phenotypic similarities to SSc and high ILD prevalence justify universal screening.</div><div class="evidence">Low certainty · 2 observational studies, n=277</div></div></div>
+    </div>
+    <div id="scr-sjd" class="ctd-panel">
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>Screen SjD patients with risk factors</b> — older age, male sex, active extrapulmonary organ involvement, increased inflammatory markers.</div><div class="evidence">Low certainty · 7 observational studies + 1 meta-analysis, n=6157</div></div></div>
+    </div>
+    <div id="scr-sle" class="ctd-panel">
+      <div class="rec"><span class="badge b-none">No recommendation</span><div><div class="rec-text">Insufficient evidence; very low ILD prevalence in SLE prevents a firm recommendation.</div><div class="evidence">Very limited data — 2 observational studies, 170 patients</div></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Should PFTs replace HRCT for screening? (PICO 1–4)</div>
+    <div class="rec"><span class="badge b-against">Against (Strong)</span><div><div class="rec-text"><b>Do not replace HRCT with PFTs (FVC/DLCO)</b> for ILD screening in any CTD. PFTs missed 6–88% of ILD cases in SSc. Sensitivity varied 34–99% across CTDs — unacceptably variable.</div><div class="evidence">Low certainty for SSc, RA, IIM · Very low for other CTDs · 9 SSc studies (n=3191), 4 RA studies (n=287)</div></div></div>
+    <div class="tip">PFTs and symptom assessment remain important for functional evaluation — they cannot serve as standalone ILD screening tools. Missing ILD = lost treatment opportunity + increased morbidity and mortality.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Should lung ultrasound replace HRCT? (PICO 5–11)</div>
+    <div class="rec"><span class="badge b-against">Against (Conditional)</span><div><div class="rec-text"><b>Do not replace HRCT with LUS</b> — either extended (&gt;18 intercostal spaces) or short protocol (≤18 spaces). Overall LUS sensitivity 94%, specificity 86% across 12 studies (n=971), but false-negatives still cause diagnostic delays and LUS is highly operator-dependent.</div><div class="evidence">Low certainty (short protocol) · Very low certainty (extended protocol) · B-lines non-specific for ILD</div></div></div>
+  </div>
+
+</div>
+
+<!-- DIAGNOSIS -->
+<div id="diagnosis" class="section">
+
+  <div class="card">
+    <div class="card-title">Baseline risk assessment at ILD diagnosis (NQ 8–11)</div>
+    <div class="ctd-tabs">
+      <div class="ctd-tab on" onclick="showCtd('dx','ssc2',this)">SSc</div>
+      <div class="ctd-tab" onclick="showCtd('dx','ra2',this)">RA</div>
+      <div class="ctd-tab" onclick="showCtd('dx','iim2',this)">IIM</div>
+      <div class="ctd-tab" onclick="showCtd('dx','oth2',this)">Other CTDs</div>
+    </div>
+    <div id="dx-ssc2" class="ctd-panel on">
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text">Perform global assessment including <b>HRCT extent, FVC, DLCO, ATA-I antibodies, skin involvement (mRSS and progression), CRP/ESR, and African American ethnicity</b> to identify high-risk SSc-ILD patients.</div><div class="evidence">Low certainty · 14 observational studies, n=5268</div></div></div>
+    </div>
+    <div id="dx-ra2" class="ctd-panel">
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text">Perform global assessment including <b>UIP/probable-UIP pattern on HRCT, extent of ILD, FVC and DLCO</b>. UIP pattern carries highest mortality risk. Anti-CCP and RF positivity also linked to poor outcomes.</div><div class="evidence">Low certainty · 25 studies, n=7587</div></div></div>
+    </div>
+    <div id="dx-iim2" class="ctd-panel">
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text">Perform global assessment including <b>HRCT, FVC, DLCO, anti-MDA-5, anti-synthetase, and anti-Ro52 antibodies</b>. Anti-MDA-5 positivity with ferritin &gt;1600 ng/mL signals highest mortality risk.</div><div class="evidence">Low certainty · 21 studies, n=1985 · Mainly Asian cohort data — ethnicity extrapolation caution warranted</div></div></div>
+    </div>
+    <div id="dx-oth2" class="ctd-panel">
+      <div class="rec"><span class="badge b-none">No recommendation</span><div><div class="rec-text">Very low evidence for SjD; no evidence for SLE and MCTD. Risk factors are disease-specific — extrapolation not appropriate.</div><div class="evidence">Only 1 retrospective single-centre study for SjD (n=33)</div></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Role of BAL and lung biopsy at diagnosis (NQ 12–13)</div>
+    <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>BAL may be considered</b> when infection is suspected or to exclude alternative diagnoses. Pathogens detected in 22–25% of CTD-ILD patients on BAL in published studies.</div><div class="evidence">Very low certainty · 21 studies, n=1196 · MDT discussion advised before performing BAL</div></div></div>
+    <div class="rec"><span class="badge b-against">Against (Conditional)</span><div><div class="rec-text"><b>Lung biopsy should not be routinely performed</b> at CTD-ILD diagnosis. TBLB identified CTD-ILD in only 13.8% of unclassifiable ILD cases. Pneumothorax occurred in 4 patients across studies reviewed.</div><div class="evidence">Very low certainty · Consider only in MDT discussion if atypical HRCT features or malignancy suspected</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Functional and patient-reported assessment (NQ 14–19)</div>
+    <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>6MWT</b> — use to assess severity and prognosis across all CTD-ILD subtypes. Lower 6MWD and SpO₂ desaturation predict progression and mortality. Caveats: avoid in RA with lower limb joint damage; in IIM with significant muscle involvement.</div><div class="evidence">Low certainty for SSc · Very low for RA, IIM, other CTDs · 12 SSc studies (n=1724)</div></div></div>
+    <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>PROMs</b> (SGRQ, K-BILD, MRC, FACIT-dyspnoea, LCQ) capture symptom burden and daily life impact that objective measures miss. Weak but significant correlations with FVC, DLCO and 6MWD.</div><div class="evidence">Low certainty SSc · Very low for other CTDs · No single PROM is specifically recommended over others</div></div></div>
+  </div>
+
+</div>
+
+<!-- MONITORING -->
+<div id="monitoring" class="section">
+
+  <div class="card">
+    <div class="card-title">PFT monitoring frequency (NQ 20–23)</div>
+    <div class="ctd-tabs">
+      <div class="ctd-tab on" onclick="showCtd('mon','ssc3',this)">SSc</div>
+      <div class="ctd-tab" onclick="showCtd('mon','ra3',this)">RA</div>
+      <div class="ctd-tab" onclick="showCtd('mon','iim3',this)">IIM</div>
+      <div class="ctd-tab" onclick="showCtd('mon','oth3',this)">Other CTDs</div>
+    </div>
+    <div id="mon-ssc3" class="ctd-panel on">
+      <div class="row2">
+        <div class="metric"><div class="metric-val">3–6 mo</div><div class="metric-lbl">First 3–5 years</div></div>
+        <div class="metric"><div class="metric-val">6–12 mo</div><div class="metric-lbl">Thereafter (minimum)</div></div>
+      </div>
+      <div class="rec-text" style="font-size:13px">Monitor <b>FVC and DLCO</b>. FVC is more responsive to treatment. Isolated DLCO fall should raise suspicion for emerging pulmonary hypertension. Repeat anytime progression is clinically suspected.</div>
+      <div class="evidence" style="margin-top:6px">Low certainty · 47 studies, n=5386 · FVC changes significantly correlate with mortality</div>
+    </div>
+    <div id="mon-ra3" class="ctd-panel">
+      <div class="row2">
+        <div class="metric"><div class="metric-val">3–6 mo</div><div class="metric-lbl">First 1–2 years</div></div>
+        <div class="metric"><div class="metric-val">6–12 mo</div><div class="metric-lbl">Thereafter</div></div>
+      </div>
+      <div class="rec-text" style="font-size:13px">Monitor <b>FVC, DLCO and FEV₁</b> — include FEV₁ given possible concomitant airway disease component in RA.</div>
+      <div class="evidence" style="margin-top:6px">Very low certainty · 16 studies, n=1717</div>
+    </div>
+    <div id="mon-iim3" class="ctd-panel">
+      <div class="row2">
+        <div class="metric"><div class="metric-val">3–6 mo</div><div class="metric-lbl">First year</div></div>
+        <div class="metric"><div class="metric-val">6–12 mo</div><div class="metric-lbl">Thereafter</div></div>
+      </div>
+      <div class="rec-text" style="font-size:13px">Monitor <b>FVC and DLCO</b>. In rapidly progressive ILD, significant FVC changes can appear within 1 month. DLCO is less reliable than FVC in IIM.</div>
+      <div class="evidence" style="margin-top:6px">Very low certainty · 16 studies, n=1176</div>
+    </div>
+    <div id="mon-oth3" class="ctd-panel">
+      <div class="row2">
+        <div class="metric"><div class="metric-val">3–6 mo</div><div class="metric-lbl">First year (SjD)</div></div>
+        <div class="metric"><div class="metric-val">6–12 mo</div><div class="metric-lbl">Thereafter</div></div>
+      </div>
+      <div class="rec-text" style="font-size:13px">For <b>SjD-ILD</b>: monitor FVC, DLCO and FEV₁. <b>No recommendation for SLE and MCTD</b> due to absence of evidence.</div>
+      <div class="evidence" style="margin-top:6px">Very low certainty · 1 retrospective study, n=19</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">HRCT repeat schedule (NQ 24–27)</div>
+    <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>SSc-ILD and RA-ILD</b> — repeat HRCT after <b>1–2 years</b>, particularly in high-risk patients. Earlier if progression suspected.</div><div class="evidence">Very low certainty for both</div></div></div>
+    <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>IIM-ILD</b> — repeat HRCT at <b>3–6 months</b> in high-risk or rapidly progressive ILD, then <b>annually for first 2 years</b>. Quantitative HRCT measures outperform visual scoring for detecting treatment response.</div><div class="evidence">Very low certainty · 13 studies, n=596</div></div></div>
+    <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>Other CTD-ILD (SjD, MCTD)</b> — repeat HRCT after <b>1–2 years</b>, extrapolated from SSc/RA/IIM data.</div><div class="evidence">Very low certainty · Indirect evidence only · Low-dose CT protocols recommended for routine follow-up</div></div></div>
+    <div class="tip">FVC is the primary monitoring outcome. HRCT is particularly useful when PFTs cannot be performed, or to rule out other causes of worsening such as infection or malignancy.</div>
+  </div>
+
+</div>
+
+<!-- TREATMENT -->
+<div id="treatment" class="section">
+
+  <div class="card">
+    <div class="card-title">Pharmacological treatment by CTD (PICO 12–25)</div>
+    <div class="ctd-tabs">
+      <div class="ctd-tab on" onclick="showCtd('tx','ssc4',this)">SSc</div>
+      <div class="ctd-tab" onclick="showCtd('tx','ra4',this)">RA</div>
+      <div class="ctd-tab" onclick="showCtd('tx','iim4',this)">IIM</div>
+      <div class="ctd-tab" onclick="showCtd('tx','oth4',this)">SjD / MCTD / SLE</div>
+    </div>
+
+    <div id="tx-ssc4" class="ctd-panel on">
+      <div class="drug-grid">
+        <div class="drug"><div class="drug-name">Mycophenolate</div><div class="drug-sub">ILD ± extrapulmonary involvement · FVC stabilisation</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · VL</span></div></div>
+        <div class="drug"><div class="drug-name">Tocilizumab</div><div class="drug-sub">Early dcSSc + elevated inflammatory markers or recent skin fibrosis progression</div><div class="drug-str"><span class="badge b-strong" style="font-size:10px;padding:2px 7px">Strong · Moderate</span></div></div>
+        <div class="drug"><div class="drug-name">Rituximab</div><div class="drug-sub">SSc-ILD (esp. severe or multi-organ involvement)</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · VL</span></div></div>
+        <div class="drug"><div class="drug-name">Cyclophosphamide</div><div class="drug-sub">SSc-ILD · Limited by cumulative toxicity</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · Low</span></div></div>
+        <div class="drug"><div class="drug-name">Nintedanib</div><div class="drug-sub">SSc-ILD with ≥10% fibrosis extent on HRCT</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · Moderate</span></div></div>
+        <div class="drug"><div class="drug-name">Nintedanib + MMF</div><div class="drug-sub">Add nintedanib on top of stable MMF (SENSCIS design)</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · Low</span></div></div>
+      </div>
+      <div class="tip">Tocilizumab is the only strong treatment recommendation in SSc-ILD — restricted to the inflammatory, early diffuse cutaneous, skin-progressive subgroup. Biologics not currently combined. Avoid high-dose glucocorticoids. Refer for lung transplant if progressive and severe.</div>
+    </div>
+
+    <div id="tx-ra4" class="ctd-panel">
+      <div class="drug-grid">
+        <div class="drug"><div class="drug-name">Immunosuppression</div><div class="drug-sub">MMF, azathioprine, tocilizumab, abatacept, rituximab, JAK inhibitors</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · VL</span></div></div>
+        <div class="drug"><div class="drug-name">Pirfenidone</div><div class="drug-sub">RA-ILD with UIP pattern specifically (TRAIL-1 trial data)</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · VL</span></div></div>
+        <div class="drug"><div class="drug-name">Nintedanib</div><div class="drug-sub">RA-ILD with progressive pulmonary fibrosis (INBUILD trial)</div><div class="drug-str"><span class="badge b-cond" style="font-size:10px;padding:2px 7px">Conditional · Low</span></div></div>
+      </div>
+      <div class="tip">For RA-ILD: treat active arthritis to target. TNF inhibitors may aggravate ILD — use case-by-case in MDT. Methotrexate now shown beneficial in RA-ILD despite historical pneumonitis concerns. No recommendation for pirfenidone in CTD-ILD other than RA-ILD (PICO 22).</div>
+    </div>
+
+    <div id="tx-iim4" class="ctd-panel">
+      <div class="rec"><span class="badge b-strong">Strong</span><div><div class="rec-text"><b>Immunosuppressive treatment is recommended for all IIM-ILD</b>. Narrow treatment window and rapid progression mandate prompt intervention.</div><div class="evidence">Strong recommendation despite very low certainty — disease severity and high ICU admission rates justify this</div></div></div>
+      <div class="drug-grid" style="margin-top:12px">
+        <div class="drug"><div class="drug-name">Glucocorticoids</div><div class="drug-sub">Backbone of treatment in all IIM-ILD</div></div>
+        <div class="drug"><div class="drug-name">Calcineurin inhibitors</div><div class="drug-sub">Tacrolimus / cyclosporin A — add to GC</div></div>
+        <div class="drug"><div class="drug-name">Rituximab</div><div class="drug-sub">Combination or refractory disease</div></div>
+        <div class="drug"><div class="drug-name">Cyclophosphamide</div><div class="drug-sub">Rapidly progressive ILD</div></div>
+        <div class="drug"><div class="drug-name">IVIG</div><div class="drug-sub">Especially MDA-5+ IIM-ILD</div></div>
+        <div class="drug"><div class="drug-name">JAK inhibitors</div><div class="drug-sub">Tofacitinib — emerging data</div></div>
+        <div class="drug"><div class="drug-name">Nintedanib</div><div class="drug-sub">Progressive pulmonary fibrosis phenotype</div></div>
+        <div class="drug"><div class="drug-name">Plasmapheresis</div><div class="drug-sub">May be considered in rapidly progressive IIM-ILD</div></div>
+      </div>
+      <div class="tip">Anti-MDA-5 positive IIM-ILD: upfront triple combination (high-dose GC + tacrolimus + cyclophosphamide) significantly improves 12-month survival vs step-up approach (89% vs 33%).</div>
+    </div>
+
+    <div id="tx-oth4" class="ctd-panel">
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>Immunosuppressive treatment suggested</b> for SjD-ILD, MCTD-ILD and SLE-ILD. Evidence is entirely indirect — no disease-specific RCTs identified for these subgroups.</div><div class="evidence">Very low certainty · Indirect evidence from RECITAL and EVER-ILD trials</div></div></div>
+      <div class="rec"><span class="badge b-cond">Conditional</span><div><div class="rec-text"><b>Nintedanib (± immunosuppressant)</b> suggested for progressive pulmonary fibrosis phenotype in any CTD-ILD including SjD/MCTD/SLE.</div><div class="evidence">Low certainty · INBUILD trial subgroup data</div></div></div>
+      <div class="drug-grid" style="margin-top:10px">
+        <div class="drug"><div class="drug-name">Mycophenolate</div><div class="drug-sub">First-line option</div></div>
+        <div class="drug"><div class="drug-name">Azathioprine</div><div class="drug-sub">Alternative immunosuppressant</div></div>
+        <div class="drug"><div class="drug-name">Glucocorticoids</div><div class="drug-sub">Adjunct — avoid long-term high dose</div></div>
+        <div class="drug"><div class="drug-name">Rituximab / CYC</div><div class="drug-sub">Combination or severe disease</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Overarching treatment principles (NQ 28)</div>
+    <div class="algo-step"><div class="step-num">1</div><div class="rec-text" style="font-size:13px">Prescribe off-label/highly specialised therapy only in <b>expert ILD + CTD centres</b></div></div>
+    <div class="algo-step"><div class="step-num">2</div><div class="rec-text" style="font-size:13px"><b>Multidisciplinary discussion</b> including pulmonologist and rheumatologist is advised for all cases</div></div>
+    <div class="algo-step"><div class="step-num">3</div><div class="rec-text" style="font-size:13px">Use <b>RCT inclusion criteria</b> to guide agent selection — efficacy demonstrated in selected patient populations (Conditional · VL)</div></div>
+    <div class="algo-step"><div class="step-num">4</div><div class="rec-text" style="font-size:13px"><b>Early and/or aggressive treatment</b> for patients at risk of progressive or severe ILD, especially anti-MDA-5 positive patients</div></div>
+    <div class="algo-step"><div class="step-num">5</div><div class="rec-text" style="font-size:13px">Consider <b>lung transplant referral</b> for progressive, severe ILD unresponsive to therapy</div></div>
+    <div class="algo-step"><div class="step-num">6</div><div class="rec-text" style="font-size:13px">Non-pharmacological management (oxygen, rehabilitation, palliative care) is important but <b>not addressed</b> in this guideline — follow disease-specific EULAR recommendations</div></div>
+  </div>
+
+</div>
+
+<!-- RESEARCH GAPS -->
+<div id="research" class="section">
+  <div class="card">
+    <div class="card-title">Key research priorities identified by the ERS/EULAR task force</div>
+    <div class="algo-step"><div class="step-num purple">A</div><div class="rec-text" style="font-size:13px"><b>AI and digital monitoring</b> — assess role of AI for disease trajectory prediction; validate home spirometry/oximetry tools; evaluate remote 6MWT using mobile devices</div></div>
+    <div class="algo-step"><div class="step-num purple">B</div><div class="rec-text" style="font-size:13px"><b>Risk stratification tools</b> — develop composite tools to tailor upfront treatment; define uniform CTD-ILD progression criteria; clarify impact of RA articular disease activity on ILD prognosis</div></div>
+    <div class="algo-step"><div class="step-num purple">C</div><div class="rec-text" style="font-size:13px"><b>Novel therapies</b> — evaluate CAR-T cells, bi/tri-specific antibodies, plasmapheresis in IIM-ILD; conduct IVIG vs placebo RCT for IIM-ILD; evaluate tofacitinib in prospective trials</div></div>
+    <div class="algo-step"><div class="step-num purple">D</div><div class="rec-text" style="font-size:13px"><b>Biomarkers and genetics</b> — assess MUC5B promoter variant as RA screening tool; validate IIM-ILD prognostic biomarkers across ethnicities; evaluate liquid biopsy and genomic transbronchial biopsy</div></div>
+    <div class="algo-step"><div class="step-num purple">E</div><div class="rec-text" style="font-size:13px"><b>Anti-fibrotic research</b> — assess pirfenidone and nintedanib effects on long-term mortality; assess pirfenidone efficacy across different HRCT patterns (UIP vs NSIP)</div></div>
+    <div class="algo-step"><div class="step-num purple">F</div><div class="rec-text" style="font-size:13px"><b>Screening frequency</b> — no recommendation currently possible; multicentre prospective studies needed to define optimal re-screening intervals</div></div>
+    <div class="algo-step"><div class="step-num purple">G</div><div class="rec-text" style="font-size:13px"><b>Non-pharmacological management</b> — evaluate lung transplantation, supplemental oxygen, and palliative care across CTD-ILD populations — none addressed in current guideline</div></div>
+    <div class="algo-step"><div class="step-num purple">H</div><div class="rec-text" style="font-size:13px"><b>SjD / MCTD / SLE-ILD</b> — prospective collaborative studies urgently needed; no disease-specific RCTs exist; outcomes must include PFTs, HRCT, survival, symptoms and quality of life</div></div>
+  </div>
+</div>
+
+<div class="disc">
+  <b>Source:</b> Antoniou KM, Distler O, Gheorghiu A-M, et al. ERS/EULAR clinical practice guidelines for connective tissue disease-associated interstitial lung disease. <i>Eur Respir J</i> 2026; 67: 2402533. DOI: 10.1183/13993003.02533-2024. Endorsed by the ERS Executive Committee (9 June 2025), EULAR Council (16 December 2024), and ERN-LUNG (5 June 2025). Open access under CC BY-NC-ND licence.<br><br>
+  <b>Disclaimer:</b> This interactive module is an educational summary prepared for clinical self-education purposes only. It does not replace the full published guideline, clinical judgement, or individualised patient assessment. Recommendations must be interpreted in the context of local reimbursement policies, drug availability, regulatory approvals, and each patient's clinical circumstances. Developed by Vamsipedia® · Precision Pulmonary Diagnostics.
+</div>
+
+</div>
+
+<div class="footer">Vamsipedia® · Precision Pulmonary Diagnostics · Educational use only · Source: ERS/EULAR CTD-ILD Guidelines 2026</div>
+
+<script>
+function showSection(id,btn){
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active')});
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function showCtd(group,id,el){
+  var all=['ssc','ra','iim','mctd','sjd','sle','ssc2','ra2','iim2','oth2','ssc3','ra3','iim3','oth3','ssc4','ra4','iim4','oth4'];
+  all.forEach(function(s){var p=document.getElementById(group+'-'+s);if(p)p.classList.remove('on')});
+  el.parentElement.querySelectorAll('.ctd-tab').forEach(function(t){t.classList.remove('on')});
+  var panel=document.getElementById(group+'-'+id);
+  if(panel)panel.classList.add('on');
+  el.classList.add('on');
+}
+</script>
+</body>
+</html>
